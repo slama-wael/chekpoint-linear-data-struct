@@ -1,7 +1,7 @@
 ALGORITHM data_struct_2
 VAR
      htab: HASH_TABLE<INTEGER,INTEGER>
-    set1,set2:array_of : ARRAY_OF INTEGER;
+    set1,set2:array_of integer[15];
     sum,i,j : INTEGER;
 BEGIN
 sum:= 0 ;
@@ -20,7 +20,7 @@ sum:= 0 ;
    END_FOR
 
    FOR i FROM 0 TO set1.length-1 STEP 1 DO
-             IF (htab.ge(set1[i]=1)) THEN
+             IF (htab.get(set1[i]=1)) THEN
              sum:=sum+set1[i];
              END_IF
     END_FOR
